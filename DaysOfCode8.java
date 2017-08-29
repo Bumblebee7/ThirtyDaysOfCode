@@ -47,7 +47,9 @@ public class DaysOfCode8 {
 			if (phoneBook.get(s) == null)
 				System.out.println("Not found");
 			else
-				System.out.println(s + "=" + phoneBook.get(s));
+				// toString useally is not necessary because the Compiler will
+				// do it on his own, but usually it is what happens here
+				System.out.println(s + "=" + phoneBook.get(s).toString());
 
 		}
 		in.close();
