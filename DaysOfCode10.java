@@ -7,11 +7,12 @@ import java.util.Scanner;
  * Print out the total number of consecutive 1. Use the binary representation of a integer value.
  * 
  * Input:
- * A single positive integer value (countBin() works with negative integers also.
+ * A single positive integer value (The method countBin() works with negative integers also).
  */
 
 public class DaysOfCode10 {
 
+	// solution #1
 	public static void countBin(int num) {
 
 		// Concat the String with 0 to get easy access to the last char in the
@@ -46,6 +47,7 @@ public class DaysOfCode10 {
 		System.out.println("\n");
 	}
 
+	// solution #2
 	private static void calculateBin(int num) {
 		int count = 0, min = 0;
 		while (num > 0) {
