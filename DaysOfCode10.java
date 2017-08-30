@@ -2,15 +2,21 @@ package thirtyDaysOfCode;
 
 import java.util.Scanner;
 
+/*
+ * Task:
+ * Print out the total number of consecutive 1. Use the binary representation of a integer value.
+ * 
+ * Input:
+ * A single positive integer value (countBin() works with negative integers also.
+ */
+
 public class DaysOfCode10 {
 
-	public static void countBin(int n) {
-
-		System.out.println("Vergleichswert: " + Integer.toBinaryString(n));
+	public static void countBin(int num) {
 
 		// Concat the String with 0 to get easy access to the last char in the
 		// Array
-		String binaryStr = (Integer.toBinaryString(n) + "0");
+		String binaryStr = (Integer.toBinaryString(num) + "0");
 		char[] binaryArr = binaryStr.toCharArray();
 		// total amount of consecutive '1'
 		int amount = 0;
@@ -37,6 +43,27 @@ public class DaysOfCode10 {
 			}
 		}
 		System.out.printf("The exact number of consecutive \'1\' is %d.", amount);
+		System.out.println("\n");
+	}
+
+	private static void calculateBin(int num) {
+		int count = 0, min = 0;
+		while (num > 0) {
+
+			if (num % 2 == 1) {
+
+				count++;
+				if (count >= min) {
+					min += count;
+				}
+			} else {
+				count = 0;
+			}
+
+			num /= 2;
+		}
+		System.out.println(min);
+
 	}
 
 	public static void main(String[] args) {
@@ -44,6 +71,10 @@ public class DaysOfCode10 {
 		Scanner scan = new Scanner(System.in);
 		int num = scan.nextInt();
 		scan.close();
+		System.out.println("Vergleichswert: " + Integer.toBinaryString(num) + "\n");
+		System.out.println("The obvious way:");
 		countBin(num);
+		System.out.println("The mathematically way:");
+		calculateBin(num);
 	}
 }
