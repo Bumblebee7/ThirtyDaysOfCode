@@ -1,4 +1,4 @@
-package thirtyDaysOfCode;
+package daysOfCode06;
 
 import java.util.Scanner;
 
@@ -7,9 +7,9 @@ public class DaysOfCode6 {
 	/*
 	 * Challenge 7/30 - 30 Days of Code Challenges by HackerRank.com
 	 * 
-	 * Task: Given a string, S, of length N that is indexed from 0 to N - 1,
-	 * print its even-indexed and odd-indexed characters 2 as space-separated
-	 * strings on a single line
+	 * Task: Given a string, S, of length N that is indexed from 0 to N - 1, print
+	 * its even-indexed and odd-indexed characters 2 as space-separated strings on a
+	 * single line
 	 * 
 	 * Input Format: The first line contains an integer, T (the number of test
 	 * cases). Each line i of the T subsequent lines contain a String, S.

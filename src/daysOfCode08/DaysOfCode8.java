@@ -1,4 +1,4 @@
-package thirtyDaysOfCode;
+package daysOfCode08;
 
 import java.util.HashMap;
 import java.util.Map;

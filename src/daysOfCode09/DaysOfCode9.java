@@ -1,4 +1,4 @@
-package thirtyDaysOfCode;
+package daysOfCode09;
 
 import java.util.Scanner;
 

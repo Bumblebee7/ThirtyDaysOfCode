@@ -40,5 +40,4 @@ class MyBook extends Book {
 		System.out.println("Author: " + author);
 		System.out.println("Price: " + getPrice());
 	}
-
 }

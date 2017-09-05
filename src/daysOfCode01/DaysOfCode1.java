@@ -1,4 +1,4 @@
-package thirtyDaysOfCode;
+package daysOfCode01;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -48,8 +48,8 @@ public class DaysOfCode1 {
 		System.out.println(sum2 + " (If you try du calculate in output: " + d + e + ")");
 
 		/*
-		 * Concatenate and print the String variables on a new line; the 's'
-		 * variable above should be printed first.
+		 * Concatenate and print the String variables on a new line; the 's' variable
+		 * above should be printed first.
 		 */
 		System.out.println(s + t);
 
