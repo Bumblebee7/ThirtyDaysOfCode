@@ -8,17 +8,18 @@ public class Solution {
 
 	static void levelOrder(Node root) {
 
-		Queue<Integer> order = new LinkedList<Integer>();
+		Queue<Node> levelO = new LinkedList<Node>();
+		levelO.add(root);
 
-		if (root != null) {
-			order.add(root.data);
-			if (root.left != null)
-				levelOrder(root.left);
-			if (root.right != null)
-				levelOrder(root.right);
+		while (!levelO.isEmpty()) {
+			Node current = levelO.remove();
+			System.out.print(current.data + " ");
+
+			if (current.left != null)
+				levelO.add(current.left);
+			if (current.right != null)
+				levelO.add(current.right);
 		}
-		if (root.left == null && root.right == null)
-			System.out.println(order);
 	}
 
 	public static Node insert(Node root, int data) {
@@ -45,6 +46,7 @@ public class Solution {
 			int data = scan.nextInt();
 			root = insert(root, data);
 		}
+		scan.close();
 		levelOrder(root);
 	}
 }
