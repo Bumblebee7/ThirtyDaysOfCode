@@ -22,9 +22,11 @@ public class Solution {
 		for (int a : values) {
 			if (a <= 1)
 				System.out.println("Not prime");
+			else if (a == 2)
+				System.out.println("Prime");
 			else {
 				boolean isPrime = true;
-				for (int i = 3; i < a; i++) {
+				for (int i = 2; i <= Math.sqrt(a); i++) {
 					if (a % i == 0) {
 						isPrime = false;
 						break;
