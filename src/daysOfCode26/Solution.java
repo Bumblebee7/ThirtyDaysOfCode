@@ -16,17 +16,18 @@ public class Solution {
 		int ExpectedDay = scan.nextInt();
 		int ExpectedMonth = scan.nextInt();
 		int ExpectedYear = scan.nextInt();
+		scan.close();
 
+		// calculate fine
+		int fine = 0;
 		if (ActualYear > ExpectedYear)
-			System.out.println("10000");
+			fine = 10000;
 		else if (ActualYear == ExpectedYear) {
-			int fine = 0;
 			if (ActualMonth > ExpectedMonth)
 				fine += (Math.abs(ExpectedMonth - ActualMonth) * 500);
 			else if (ActualDay > ExpectedDay)
 				fine += (Math.abs(ExpectedDay - ActualDay) * 15);
-			System.out.println(fine);
-		} else
-			System.out.println("0");
+		}
+		System.out.println(fine);
 	}
 }
